@@ -11,15 +11,25 @@
 }
 
 mat-card {
-    width: 40%;
+    width: 60%;
 
     .datepicker-container {
-        font-size: 10px;
+        font-size: 12px;
         display: flex;
         justify-content: center;
 
         mat-form-field {
             width: 100%;
         }
+    }
+
+    mat-card-content {
+        table {
+            width: 100%;
+        }
+    }
+
+    mat-progress-spinner {
+        margin: 0 auto;
     }
 }

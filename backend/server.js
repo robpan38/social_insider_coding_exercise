@@ -1,6 +1,7 @@
 const PORT = process.env.PORT | 3500;
 const axios = require("axios");
 const express = require("express");
+const cors = require("cors");
 const app = express();
 
 const { getTotalPropertyPerProfile } = require("./utils");
@@ -29,6 +30,7 @@ const SOCIAL_INSIDER_GET_PROFILE_DATA_REQUEST = {
 };
 
 app.use(express.json());
+app.use(cors());
 
 app.post('/get_brand_data', async (req, res) => {
     const ceva = await axios.post(
